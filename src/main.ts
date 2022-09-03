@@ -7,9 +7,19 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('Aplicación de administración de Personajes')
+    .addBearerAuth({
+      type: 'http',
+      scheme: 'bearer',
+      bearerFormat: 'JWT',
+      name: 'JWT',
+      description: 'Enter JWT token',
+      in: 'header',
+    },
+    'JWT-auth',)
     .setDescription('Descripcion')
     .setVersion('1.0')
-    .addTag('character') //después asignar el decorador en el controller
+    .addTag('character')
+    .addTag('administrador') //después asignar el decorador en el controller
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);

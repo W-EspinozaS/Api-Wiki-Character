@@ -16,7 +16,7 @@ export class CharacterService {
       }
 
     async findOne(id: string): Promise<Character>{
-        return await this.characterModel.findOne({_id: id});
+        return await this.characterModel.findOne({id});
       }
 
     async create(dtoCharacter: CreateCharacterDto): Promise<Character>{
