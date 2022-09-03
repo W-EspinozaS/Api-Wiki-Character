@@ -13,7 +13,7 @@ dotenv.config();
 
 @Module({
   imports:[AdministradorModule, PassportModule, JwtModule.register({
-  secret: process.env.AUTH_KEY, signOptions:{expiresIn: process.env.AUTH_EXPIRES_IN},}),
+  secret: process.env.AUTH_KEY, signOptions: {expiresIn: "2days"},}),
   MongooseModule.forFeature([{name: Administrador.name, schema: AdministradorSchema}])],
   controllers: [AuthController],
   providers: [AuthService, LocalStrategy, JwtStrategy],
