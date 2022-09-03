@@ -20,7 +20,7 @@ export class AdministradorService {
   }
 
   async create(dtoAdministrador: CreateAdministradorDto): Promise<Administrador> {
-    const nuevo = new this.administradorModel(this.administradorModel);
+    const nuevo = new this.administradorModel(dtoAdministrador);
     return await nuevo.save();
   }
 

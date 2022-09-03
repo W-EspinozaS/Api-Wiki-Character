@@ -18,6 +18,7 @@ async function bootstrap() {
     'JWT-auth',)
     .setDescription('Descripcion')
     .setVersion('1.0')
+    .addTag('auth')
     .addTag('character')
     .addTag('administrador') //después asignar el decorador en el controller
     .build();

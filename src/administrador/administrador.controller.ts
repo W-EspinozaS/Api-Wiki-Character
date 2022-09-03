@@ -13,7 +13,7 @@ import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 export class AdministradorController {
   constructor(private readonly administradorService: AdministradorService) {}
 
-  @UseGuards(JwtAuthGuard)
+  // @UseGuards(JwtAuthGuard)
   @Post('/create')
   async create(@Body() body: CreateAdministradorDto, @Res() res): Promise<Administrador>{
 
