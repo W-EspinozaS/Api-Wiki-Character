@@ -30,7 +30,7 @@ export class CharacterController {
 
   @UseGuards(JwtAuthGuard)
   @Put(':id')
-  async update(@Param('id') id, @Body() character: UpdateCharacterDto): Promise<Character>{
+  async update(@Param('id') id, @Body() character: UpdateCharacterDto,): Promise<Character>{
     return await this.characterService.update(id, character);
   }
 

@@ -19,7 +19,7 @@ export class Character{
     lanzamiento: string;
     @Prop()
     status:      string;
-    @Prop()
+    @Prop([Apariciones])
     apariciones: Apariciones[];
 }
 

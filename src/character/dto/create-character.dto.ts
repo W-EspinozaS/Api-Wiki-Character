@@ -25,6 +25,6 @@ export class CreateCharacterDto {
     readonly lanzamiento: string;
     @ApiProperty()
     readonly status:      string;
-    @ApiProperty()
+    @ApiProperty({type:Apariciones})
     readonly apariciones: Apariciones[];
 }
